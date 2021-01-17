@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<ul id="fruits"></ul>
+		<script>
+			let contents = "";
+			let fruits = [ "Mango", "Orange", "Apple" ];
+			let length = fruits.push("Banana");
+			console.log(length);
+			console.log(fruits);
+			fruits.push("orange");
+			console.log(fruits.length);
+			let found = fruits.find( function( item ) {
+				return item == "orange";
+			});
+			console.log(found);
+			found = fruits.find( function( item ) {
+				return item;
+			});
+			console.log(found);
+			found = fruits.find( item => item == "Orange" );
+			console.log(found);
+			fruits.forEach( function( element ) {
+				contents = contents + "<li>" + element + "</li>";
+			});
+			document.getElementById("fruits").innerHTML = contents;
+			
+			fruits.forEach( (item, index) => console.log(index + "=" + item) );
+			
+		</script>
+	</body>
+</html>
