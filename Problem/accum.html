@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<script>
+			function accum( data ) {
+				let str = '';
+					for ( let i = 0; i < data.length; i++ ) {
+						for ( let j = 0; j < i+1; j++ ) {
+							if ( j === 0 ) {
+								str += data[i].toUpperCase();
+							} else {
+								str += data[i].toLowerCase();
+							}
+						}
+						if ( i !== data.length - 1 ) {
+							str += '-';
+						}
+				}
+				return str;
+			}
+			console.log(accum("RqaEzty"));
+		</script>
+	</body>
+</html>
