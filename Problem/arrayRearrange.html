@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<script>
+			function moveZeros( data ) {
+				let zero = [];
+				for ( let i = 0; i < data.length; i++ ) {
+					if ( data[i].toString() == 0 ) {
+						let removed = data.splice( i, 1 );
+						zero.push( removed[0] );
+					} 
+				}
+				return data.concat( zero );
+			}
+			let data = [ 1, 0, 'ss', false, 0, false, 'd', 1, 0 ];
+			console.log( moveZeros( data ) );
+		</script>
+	</body>
+</html>
